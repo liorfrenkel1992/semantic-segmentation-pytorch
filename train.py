@@ -38,8 +38,8 @@ def train(segmentation_module, iterator, optimizers, history, epoch, cfg):
         adjust_learning_rate(optimizers, cur_iter, cfg)
 
         # forward pass
-        import ipdb
-        ipdb.set_trace()
+        #import ipdb
+        #ipdb.set_trace()
         loss, acc = segmentation_module(batch_data)
         loss = loss.mean()
         acc = acc.mean()
