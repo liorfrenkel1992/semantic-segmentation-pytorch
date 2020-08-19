@@ -34,7 +34,6 @@ class SegmentationModule(SegmentationModuleBase):
             else:
                 print('before')
                 pred = self.decoder(self.encoder(feed_dict['img_data'], return_feature_maps=True))
-                print('after')
 
             loss = self.crit(pred, feed_dict['seg_label'])
             if self.deep_sup_scale is not None:
