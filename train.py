@@ -41,7 +41,6 @@ def train(segmentation_module, iterator, optimizers, history, epoch, cfg):
         #import ipdb
         #ipdb.set_trace()
         loss, acc = segmentation_module(batch_data)
-        print('got here')
         loss = loss.mean()
         acc = acc.mean()
 
